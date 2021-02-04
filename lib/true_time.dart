@@ -15,7 +15,7 @@ class TrueTime {
     int timeout = 5000,
     int retryCount = 3,
     bool logging = true,
-    String ntpServer = 'ntp.google.com',
+    String ntpServer = 'time.google.com',
   }) async {
     assert(timeout > 0);
     assert(retryCount >= 0);
