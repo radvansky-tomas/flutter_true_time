@@ -13,8 +13,8 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Action;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -43,18 +43,14 @@ public class TrueTimePlugin implements MethodCallHandler {
                         .initializeRx((String) call.argument("ntpServer"))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new Consumer<Date>() {
+                        .subscribe(new BiConsumer<Date, Throwable>() {
                             @Override
-                            public void accept(Date date) {
-                                if (!TrueTimeRx.isInitialized()) {
-                                    return;
+                            public void accept(Date date, Throwable throwable) throws Exception {
+                                if (TrueTimeRx.isInitialized()) {
+                                    result.success(true);
+                                } else if (throwable != null) {
+                                    result.error("Error initializing TrueTime", throwable.getMessage(), false);
                                 }
-                                result.success(true);
-                            }
-                        }, new Consumer<Throwable>() {
-                            @Override
-                            public void accept(Throwable e) {
-                                result.error("Error initializing TrueTime", e.getMessage(), false);
                             }
                         });
                 break;

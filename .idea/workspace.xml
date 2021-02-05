@@ -20,33 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14ab0db-1d47-4087-b1c0-6a4f28a54842" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/tv/orale/truetimeexample/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/tv/orale/truetimeexample/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/true_time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/true_time.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/true_time.iml" beforeDir="false" afterPath="$PROJECT_DIR$/true_time.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/tv/orale/truetime/TrueTimePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/tv/orale/truetime/TrueTimePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>SWIFT_VERSION</find>
-      <find>TrueTimePlugin</find>
-      <find>sim</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,22 +120,22 @@
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
     <state width="585" height="466" key="DebuggerActiveHint/0.25.2560.1325@0.25.2560.1325" timestamp="1612475981684" />
-    <state width="2518" height="376" key="GridCell.Tab.0.bottom" timestamp="1612475967253">
+    <state width="2518" height="376" key="GridCell.Tab.0.bottom" timestamp="1612483766232">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="2518" height="376" key="GridCell.Tab.0.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1612475967253" />
-    <state width="2518" height="376" key="GridCell.Tab.0.center" timestamp="1612475967252">
+    <state width="2518" height="376" key="GridCell.Tab.0.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1612483766232" />
+    <state width="2518" height="376" key="GridCell.Tab.0.center" timestamp="1612483766232">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="2518" height="376" key="GridCell.Tab.0.center/0.25.2560.1325@0.25.2560.1325" timestamp="1612475967252" />
-    <state width="2518" height="376" key="GridCell.Tab.0.left" timestamp="1612475967252">
+    <state width="2518" height="376" key="GridCell.Tab.0.center/0.25.2560.1325@0.25.2560.1325" timestamp="1612483766232" />
+    <state width="2518" height="376" key="GridCell.Tab.0.left" timestamp="1612483766231">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="2518" height="376" key="GridCell.Tab.0.left/0.25.2560.1325@0.25.2560.1325" timestamp="1612475967252" />
-    <state width="2518" height="376" key="GridCell.Tab.0.right" timestamp="1612475967252">
+    <state width="2518" height="376" key="GridCell.Tab.0.left/0.25.2560.1325@0.25.2560.1325" timestamp="1612483766231" />
+    <state width="2518" height="376" key="GridCell.Tab.0.right" timestamp="1612483766232">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="2518" height="376" key="GridCell.Tab.0.right/0.25.2560.1325@0.25.2560.1325" timestamp="1612475967252" />
+    <state width="2518" height="376" key="GridCell.Tab.0.right/0.25.2560.1325@0.25.2560.1325" timestamp="1612483766232" />
     <state x="781" y="323" key="SettingsEditor" timestamp="1612473652967">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
@@ -164,13 +146,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
           <url>file://$PROJECT_DIR$/lib/true_time.dart</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/true_time.dart</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

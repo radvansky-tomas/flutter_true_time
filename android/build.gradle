@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.6.0'
     }
 }
 
@@ -24,7 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 16
@@ -34,8 +34,7 @@ android {
         disable 'InvalidPackage'
     }
 }
-
 dependencies {
-    implementation "com.github.instacart.truetime-android:library-extension-rx:3.4"
-    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    implementation "com.github.radvansky-tomas.truetime-android:library-extension-rx:204e60a"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
 }
