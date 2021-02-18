@@ -2,6 +2,7 @@ package tv.orale.truetime;
 
 import android.util.Log;
 
+import com.instacart.library.truetime.CacheInterface;
 import com.instacart.library.truetime.TrueTimeRx;
 
 import java.util.Date;
@@ -13,6 +14,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -29,6 +31,8 @@ public class TrueTimePlugin implements MethodCallHandler {
         channel.setMethodCallHandler(new TrueTimePlugin());
     }
 
+    Disposable initSubscription;
+
     @Override
     public void onMethodCall(MethodCall call, final Result result) {
         switch (call.method) {
@@ -36,7 +40,13 @@ public class TrueTimePlugin implements MethodCallHandler {
                 if (!(call.arguments instanceof Map)) {
                     throw new IllegalArgumentException("Map argument expected");
                 }
-                TrueTimeRx.build()
+                //Clear old subscriber
+                if (initSubscription != null && !initSubscription.isDisposed())
+                {
+                    initSubscription.dispose();
+                }
+
+                initSubscription = TrueTimeRx.build()
                         .withConnectionTimeout((int) call.argument("timeout"))
                         .withRetryCount((int) call.argument("retryCount"))
                         .withLoggingEnabled((Boolean) call.argument("logging"))
@@ -48,8 +58,11 @@ public class TrueTimePlugin implements MethodCallHandler {
                             public void accept(Date date, Throwable throwable) throws Exception {
                                 if (TrueTimeRx.isInitialized()) {
                                     result.success(true);
+                                    initSubscription.dispose();
+
                                 } else if (throwable != null) {
                                     result.error("Error initializing TrueTime", throwable.getMessage(), false);
+                                    initSubscription.dispose();
                                 }
                             }
                         });
